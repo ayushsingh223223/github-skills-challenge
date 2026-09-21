@@ -30,5 +30,7 @@ jobs:
           pip install pytest coverage
 
       - name: Run tests
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: |
           pytest -v
